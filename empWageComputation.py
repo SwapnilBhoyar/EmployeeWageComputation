@@ -26,6 +26,13 @@ def calculateHour(attendanceStatus):
         dayHour = 0
     return dayHour
 
+def getWorkHours(totalWorkingHours):
+    """
+    Description:
+        this function calculate working hours
+    """
+    print("Total working hours:", totalWorkingHours)
+
 def calculateWage():
     """
     Description:
@@ -46,6 +53,7 @@ def calculateWage():
         totalWage += workingHours * wagePerHour
         totalWorkingHours += workingHours
         workingDays += 1
+    getWorkHours(totalWorkingHours)
     return totalWage
 
 absent = 0
