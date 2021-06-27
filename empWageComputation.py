@@ -34,13 +34,18 @@ def calculateWage():
         this function return total employee wage of a month
     """
     wagePerHour = 20
-    workingDays = 20
+    workingDays = 0
+    totalWorkingHours = 0
+    maximumWorkingDays = 20
+    maximumWorkingHours = 100
     totalWage = 0
-    for day in range(workingDays):
+    while workingDays < maximumWorkingDays and totalWorkingHours < maximumWorkingHours:
         attendance = random.randint(0,2)
         attendanceStatus = switcher.get(attendance)
         workingHours = calculateHour(attendanceStatus)
         totalWage += workingHours * wagePerHour
+        totalWorkingHours += workingHours
+        workingDays += 1
     return totalWage
 
 absent = 0
