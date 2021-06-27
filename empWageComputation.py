@@ -2,7 +2,7 @@
 @Author: Swapnil Bhoyar
 @Date: 2021-06-27 20:36:00 
 @Last Modified by: Swapnil Bhoyar
-@Last Modified time: 2021-06-28 02:09:00
+@Last Modified time: 2021-06-28 03:34:00
 @Title : Calculate wage of employee
 """
 
