@@ -26,13 +26,6 @@ def calculateHour(attendanceStatus):
         dayHour = 0
     return dayHour
 
-def getWorkHours(totalWorkingHours):
-    """
-    Description:
-        this function calculate working hours
-    """
-    print("Total working hours:", totalWorkingHours)
-
 def calculateWage():
     """
     Description:
@@ -47,6 +40,7 @@ def calculateWage():
     maximumWorkingDays = 20
     maximumWorkingHours = 100
     totalWage = 0
+    wageInfo = {}
     while workingDays < maximumWorkingDays and totalWorkingHours < maximumWorkingHours:
         attendance = random.randint(0,2)
         attendanceStatus = switcher.get(attendance)
@@ -56,9 +50,12 @@ def calculateWage():
         totalWage += dailyWage
         totalWorkingHours += workingHours
         workingDays += 1
-    getWorkHours(totalWorkingHours)
-    print("Daily wage:", dailyWageList)
-    return totalWage
+        wageInfo[workingDays] = {
+            "Daily Wage:" : dailyWage,
+            "Total Wage:" : totalWage
+        }
+    return wageInfo
+        
 
 absent = 0
 isFullTime = 1
